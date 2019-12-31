@@ -1,6 +1,6 @@
 {
   "name": "react-contentful-embedly",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Display Embedly in contentful rich document with React Hooks",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
