@@ -4,6 +4,7 @@ export const importFromCdn = (src: string) =>
     script.src = src
     script.type = 'text/javascript'
     script.charset = 'utf-8'
+    script.async = true
     script.onload = () => {
       resolve()
     }
