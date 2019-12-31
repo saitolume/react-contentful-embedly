@@ -1,0 +1,76 @@
+{
+  "name": "react-contentful-embedly",
+  "version": "0.1.0",
+  "description": "Display Embedly in contentful rich document with React Hooks",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/saitoeku3/react-contentful-embedly"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "contentful",
+    "embedly",
+    "react"
+  ],
+  "scripts": {
+    "build": "rimraf dist && tsc -b tsconfig.json",
+    "format": "eslint \"src/**/*.ts\" --fix",
+    "lint": "eslint \"src/**/*.ts\"",
+    "prepublishOnly": "npm run build",
+    "test": "jest --config jest.config.json"
+  },
+  "author": "Tadao Iseki <saitoeku3@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@contentful/rich-text-react-renderer": "^13.4.0",
+    "@contentful/rich-text-types": "^13.4.0",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react-hooks": "^3.2.1",
+    "@types/jest": "^24.0.25",
+    "@types/react": "^16.9.17",
+    "@typescript-eslint/eslint-plugin": "^2.13.0",
+    "@typescript-eslint/parser": "^2.13.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "husky": "^3.1.0",
+    "jest": "^24.9.0",
+    "lint-staged": "^9.5.0",
+    "prettier": "^1.19.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-test-renderer": "^16.12.0",
+    "rimraf": "^3.0.0",
+    "ts-jest": "^24.2.0",
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.4"
+  },
+  "peerDependencies": {
+    "@contentful/rich-text-react-renderer": "^13.4.0",
+    "@contentful/rich-text-types": "^13.4.0",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
+  },
+  "dependencies": {
+    "acorn": "^7.1.0"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "npm run format",
+      "git add"
+    ]
+  }
+}
